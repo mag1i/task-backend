@@ -1,0 +1,7 @@
+Notes:
+Hello Hypenet team. Here are general notes to test the app on your devices.
+1: I didn't use localhost because I'm testing on my phone so I used my IP adress, change it localhost if you're testing with external device and to your IP adress if you're testing with an emulator.
+2: here's how I created certificate:  mkcert -cert-file "C:\Flutterapps\hypenettask\certificates\10.10.61.58.pem" -key-file "C:\Flutterapps\hypenettask\certificates\10.10.61.58-key.pem" 10.10.61.58
+2: here's how I run python surver to make it work: after mkcert 10.10.61.58 on powershell,
+python manage.py runserver_plus 10.10.61.58:8000 --cert-file "C:\Flutterapps\hypenettask\certificates\10.10.61.58.pem" --key-file "C:\Flutterapps\hypenettask\certificates\10.10.61.58-key.pem"
+3: WSGI is better for security as using ssl as I did is not too secured in production phase, but I used ssl to keep Debug=true.
